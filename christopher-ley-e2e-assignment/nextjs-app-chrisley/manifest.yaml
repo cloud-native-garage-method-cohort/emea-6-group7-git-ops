@@ -3,7 +3,7 @@ kind: Service
 metadata:
   annotations:
     app.openshift.io/runtime: js
-    app.openshift.io/vcs-ref: 1c55c1b632f8b90712af201f4cc6680bb0a00ee9
+    app.openshift.io/vcs-ref: 31c0535e2b5ac0c6ab71c085fa28ba6496f01388
     app.openshift.io/vcs-uri: https://github.com/chrisley75/nextjs-sample-app
   labels:
     app: nextjs-app-chrisley
@@ -28,7 +28,7 @@ kind: Deployment
 metadata:
   annotations:
     app.openshift.io/runtime: js
-    app.openshift.io/vcs-ref: 1c55c1b632f8b90712af201f4cc6680bb0a00ee9
+    app.openshift.io/vcs-ref: 31c0535e2b5ac0c6ab71c085fa28ba6496f01388
     app.openshift.io/vcs-uri: https://github.com/chrisley75/nextjs-sample-app
   labels:
     app: nextjs-app-chrisley
@@ -37,7 +37,7 @@ metadata:
   name: nextjs-app
 spec:
   progressDeadlineSeconds: 600
-  replicas: 6
+  replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -48,7 +48,7 @@ spec:
     metadata:
       annotations:
         app.openshift.io/runtime: js
-        app.openshift.io/vcs-ref: 1c55c1b632f8b90712af201f4cc6680bb0a00ee9
+        app.openshift.io/vcs-ref: 31c0535e2b5ac0c6ab71c085fa28ba6496f01388
         app.openshift.io/vcs-uri: https://github.com/chrisley75/nextjs-sample-app
       labels:
         app: nextjs-app-chrisley
@@ -61,7 +61,7 @@ spec:
         - name: PROTOCOLS
         - name: LOG_LEVEL
           value: debug
-        image: quay.io/chrisley7506/simple-nextjs-app:1c55c1b632f8b90712af201f4cc6680bb0a00ee9
+        image: quay.io/chrisley7506/simple-nextjs-app:31c0535e2b5ac0c6ab71c085fa28ba6496f01388
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -100,7 +100,7 @@ kind: Route
 metadata:
   annotations:
     app.openshift.io/runtime: js
-    app.openshift.io/vcs-ref: 1c55c1b632f8b90712af201f4cc6680bb0a00ee9
+    app.openshift.io/vcs-ref: 31c0535e2b5ac0c6ab71c085fa28ba6496f01388
     app.openshift.io/vcs-uri: https://github.com/chrisley75/nextjs-sample-app
   labels:
     app: nextjs-app-chrisley
